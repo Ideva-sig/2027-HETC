@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232f7f90'/%3E%3Ctext x='50' y='66' font-size='50' text-anchor='middle' fill='white' font-family='system-ui'%3E艺%3C/text%3E%3C/svg%3E">
+<title>2027 广州中考艺术特长生资讯 · 2026 录取结果与招生参考</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#eef5f6;--surface:#fffdf9;--surface-soft:#f7fbfa;--ink:#1d3440;--ink-secondary:#5c737b;--ink-muted:#526a70;--border:#d6e5e5;--border-strong:#7fa9aa;--accent:#2f7f90;--accent-light:#e5f3f3;--accent-dark:#185e6b;--green:#2f7b5f;--green-light:#e8f5ee;--red:#b34738;--red-light:#fff0ec;--yellow:#fff2cf;--radius:12px;--radius-sm:8px;--shadow:0 14px 44px rgba(62,105,112,.10)}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',system-ui,sans-serif;background:var(--bg) url("assets/open-design-background.png") top center/cover fixed no-repeat;color:var(--ink);line-height:1.5;padding:28px;-webkit-font-smoothing:antialiased}
+body.modal-open{overflow:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(238,245,246,.18),rgba(238,245,246,.76) 62%,rgba(238,245,246,.96));}
+.skip-link{position:fixed;inset-inline-start:16px;inset-block-start:12px;z-index:80;transform:translateY(-160%);background:var(--accent-dark);color:#fff;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none}
+.skip-link:focus{transform:translateY(0)}
+.wrap{width:100%;max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:16px;position:relative}
+.hdr{min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 0 24px;border-bottom:1px solid var(--border-strong);position:relative}
+.hdr h1{max-width:1040px;font-size:clamp(38px,5.1vw,64px);font-weight:760;color:var(--ink);letter-spacing:-.035em;line-height:1.12;text-wrap:balance}
+.hdr p{font-size:clamp(15px,1.6vw,20px);color:var(--ink-secondary);margin-top:20px;max-width:520px}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;font-size:11px;color:var(--accent-dark)}
+.hdr-meta span{border:1px solid var(--border-strong);background:rgba(255,253,249,.78);border-radius:999px;padding:5px 9px}
+
+.cd{width:100%;min-width:0;background:rgba(255,253,249,.94);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(16px)}
+.secondary-card{background:rgba(255,253,249,.86)}
+.cd-hd{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.cd-hd h2{font-size:15px;font-weight:750;color:var(--ink);letter-spacing:-.01em}
+.cd-hd .tag,.cd-hd .n{margin-inline-start:auto;font-size:11px;color:var(--ink-secondary);border:1px solid var(--border);border-radius:999px;padding:4px 8px;background:var(--surface-soft);white-space:nowrap}
+
+/* Primary task flow */
+.task-steps{list-style:none;display:flex;gap:8px;margin:-2px 0 4px;padding:0;color:var(--ink-secondary);font-size:11px}
+.task-steps li{display:flex;align-items:center;gap:6px}
+.task-steps li:not(:last-child)::after{content:"→";color:var(--border-strong);margin-inline-start:2px}
+.task-steps li span{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-light);color:var(--accent-dark);font-weight:800}
+.step{padding-top:22px}
+.step + .step{margin-top:24px;border-top:1px solid var(--border)}
+.step-hd{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.step-hd h3{font-size:18px;line-height:1.25;font-weight:780;color:var(--ink);letter-spacing:-.015em}
+.step-kicker{font-size:11px;font-weight:760;color:var(--accent-dark);margin-bottom:3px}
+.step-desc{font-size:12px;color:var(--ink-secondary);margin-top:4px;line-height:1.6}
+.step-hd>.n{margin-inline-start:auto;flex:none}
+.score-form{max-width:760px}
+.calc-note{font-size:11px;color:var(--ink-muted);margin-top:10px}
+.field-error{min-height:18px;margin-top:8px;font-size:12px;color:var(--red);font-weight:700}
+.selection-hint{display:flex;align-items:center;gap:8px;margin-top:8px;padding:9px 11px;border:1px dashed var(--border-strong);border-radius:9px;background:var(--surface-soft);color:var(--ink-secondary);font-size:12px;line-height:1.45}
+.selection-hint.ready{border-style:solid;color:var(--ink)}
+.selection-hint-mark{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;flex:none;border-radius:50%;background:var(--accent-light);color:var(--accent-dark);font-size:13px;font-weight:800}
+.selection-hint.ready .selection-hint-mark{background:var(--green-light);color:var(--green)}
+.selection-hint-text{min-width:0;flex:1}
+.selection-hint-link{flex:none;color:var(--accent-dark);font-weight:750;text-decoration:none;white-space:nowrap}
+.selection-hint-link:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* Formula */
+.fm{min-width:0;overflow:hidden;background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 18px 18px;margin-bottom:18px;font-size:13px;line-height:1.85}
+.fm .l{font-weight:760;color:var(--ink);margin-bottom:8px;font-size:15px}
+.fm code{font-family:'SF Mono',SFMono-Regular,ui-monospace,'JetBrains Mono',monospace;background:#fff;border:1px solid var(--border);padding:2px 7px;border-radius:5px;color:var(--accent-dark);font-weight:650;white-space:normal;word-break:break-word}
+.fm .hl{color:var(--red);font-weight:760}
+.fm .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--ink-secondary)}
+.fm .meta span{border:1px solid var(--border);background:#fff;border-radius:999px;padding:4px 8px}
+.fm .meta span span{border:0;background:transparent;border-radius:0;padding:0}
+.fm .note{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px;color:var(--ink-secondary);line-height:1.75}
+.fm .note b{color:var(--accent-dark)}
+
+/* Inputs */
+.ir{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.ig{flex:1;min-width:150px}
+.ig label{display:block;font-size:12px;font-weight:700;color:var(--ink-secondary);margin-bottom:7px}
+.ig input{width:100%;height:58px;padding:12px 14px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:20px;font-weight:720;color:var(--ink);background:var(--surface);transition:border-color .15s,box-shadow .15s,transform .15s}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+input[type=number]{-moz-appearance:textfield}
+.ig .err{font-size:11px;color:var(--red);margin-top:6px;min-height:14px;font-weight:650}
+.ig input.bad{border-color:var(--red);box-shadow:0 0 0 4px rgba(216,100,79,.18)}
+.p{cursor:pointer}
+.cc-hint{font-size:10px;font-weight:400;color:var(--ink-muted);margin-inline-start:4px}
+.ig input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(47,127,144,.16);transform:translateY(-1px)}
+.ig .h{font-size:11px;color:var(--ink-muted);margin-top:6px;min-height:16px}
+
+.br{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:10px 20px;border:1px solid var(--border-strong);border-radius:999px;font-size:13px;font-weight:750;cursor:pointer;transition:all .16s;letter-spacing:.01em;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-pri{background:var(--accent);color:#fff}
+.btn-pri:hover{background:var(--accent-dark)}
+.btn-sec{background:#fff;color:var(--ink)}
+.btn-sec:hover{background:var(--accent-light)}
+button:focus-visible,input:focus-visible,summary:focus-visible,.sk:focus-visible,.skip-link:focus-visible{outline:3px solid var(--accent-dark);outline-offset:3px}
+
+/* Result */
+.rs{display:none;border-radius:var(--radius);padding:18px;margin-top:16px;background:var(--surface-soft);border:1px solid var(--border)}
+.rs.show{display:block;animation:fadeIn .24s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}
+.rs .rt{text-align:center;font-size:13px;margin-bottom:1px;color:var(--ink-secondary)}
+.rs .rn{font-size:clamp(42px,7vw,74px);font-weight:800;text-align:center;letter-spacing:-.04em;line-height:.95}
+.rs.pass .rn{color:var(--green)}.rs.fail .rn{color:var(--red)}
+.rs .ru{text-align:center;font-size:12px;color:var(--ink-muted);margin:4px 0 12px}
+.rs .rd{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+.rs .rd .i{background:rgba(255,255,255,.78);border:1px solid rgba(127,169,170,.22);border-radius:var(--radius-sm);padding:10px 12px}
+.rs .rd .i .l{color:var(--ink-muted);font-size:11px;margin-bottom:4px}
+.rs .rd .i .v{font-weight:720;font-size:14px;color:var(--ink);word-break:break-word}
+.rm{padding:9px 10px;border-radius:999px;margin-top:10px;font-size:12px;text-align:center;font-weight:700}
+.rm.g{background:#dceee3;color:#1a5c38}
+.rm.r{background:#f7d9d5;color:#9c2c24}
+.rm.y{background:var(--yellow);color:#695200}
+
+/* Project Selector */
+.ps{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.ps .p{min-height:86px;padding:12px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);text-align:start;cursor:pointer;transition:all .16s;background:var(--surface);display:flex;flex-direction:column;justify-content:space-between;font:inherit;color:var(--ink)}
+.ps .p:hover{border-color:var(--accent);transform:translateY(-1px)}
+.ps .p:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
+.ps .p.sel{border-color:var(--accent);background:var(--accent);color:#fff}
+.ps .p .pi{font-size:18px;display:block;line-height:1}
+.ps .p .pi{font-family:'SF Mono',SFMono-Regular,ui-monospace,monospace;font-size:11px;font-weight:800;letter-spacing:.08em}
+.ps .p .pn{font-size:12px;font-weight:760;color:inherit}
+.ps .p .pc{font-size:11px;color:var(--ink-muted);margin-top:1px}
+.ps .p.sel .pc{color:rgba(255,255,255,.78)}
+
+/* Timeline */
+.tl-w{padding-bottom:4px}
+.tl{display:flex;gap:0;position:relative;padding:5px 0 0}
+.tl::before{content:"";position:absolute;top:11px;inset-inline-start:12px;inset-inline-end:12px;height:1px;background:var(--border-strong)}
+.tl-it{flex:1;min-width:0;text-align:center;padding:0 3px}
+.tl-it .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 1px var(--border-strong);margin:0 auto 7px;position:relative;z-index:1}
+.tl-it:last-child .dot{background:var(--red)}
+.tl-it .dt{font-size:12px;font-weight:760;color:var(--ink);margin-bottom:2px;white-space:nowrap}
+.tl-it .dc{font-size:11px;color:var(--ink-muted);line-height:1.3}
+.secondary-intro{font-size:12px;color:var(--ink-secondary);margin:-4px 0 14px;line-height:1.65}
+
+/* Table */
+.table-note{font-size:12px;color:var(--ink-secondary);margin:-6px 0 14px;line-height:1.65}
+.table-shell{min-width:0}
+.table-scroll-hint{display:none;font-size:11px;color:var(--ink-muted);margin:0 0 8px;text-align:end}
+.tw{border-radius:var(--radius-sm);border:1px solid var(--border);overflow:auto;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:900px;table-layout:auto}
+th{background:#dceeee;color:var(--ink);padding:11px 9px;text-align:left;font-weight:700;position:sticky;top:0;z-index:1;font-size:11px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:9px;border-bottom:1px solid var(--border);vertical-align:middle}
+th:nth-child(1),td:nth-child(1){width:44px;white-space:nowrap;text-align:center}
+th:nth-child(2),td:nth-child(2){min-width:360px}
+th:nth-child(3),td:nth-child(3){width:78px;white-space:nowrap}
+th:nth-child(4),td:nth-child(4){width:92px;white-space:nowrap;text-align:center}
+th:nth-child(5),td:nth-child(5){width:98px;white-space:nowrap;text-align:center}
+th:nth-child(6),td:nth-child(6){width:112px;white-space:nowrap;text-align:center}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--surface-soft)}
+
+.cc input{width:64px;padding:6px 5px;border:1px solid var(--border-strong);border-radius:5px;text-align:center;font-size:12px;font-weight:700;color:var(--ink);background:#fff}
+.cc input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,127,144,.16)}
+.link-btn{border:0;background:transparent;color:var(--ink-muted);font:inherit;font-size:10px;font-weight:500;cursor:pointer;padding:4px 2px;margin-inline-start:5px;white-space:nowrap}
+.link-btn:hover{color:var(--accent-dark);text-decoration:underline}
+.table-pending{color:var(--ink-muted);font-size:11px;white-space:nowrap}
+.cmp-good{color:var(--green);font-weight:750}
+.cmp-risk{color:var(--red);font-weight:750}
+.cmp-blocked{color:var(--ink-muted);font-size:11px;white-space:nowrap}
+
+.bg{display:inline-block;padding:2px 7px;border-radius:999px;font-size:10px;font-weight:750;margin-inline-end:6px;vertical-align:middle;border:1px solid var(--border)}
+.bs{background:var(--accent);color:#fff;border-color:var(--accent)}
+.bq{background:var(--accent-light);color:var(--accent-dark)}
+.ft{text-align:center;color:var(--ink-secondary);font-size:12px;margin:8px 0 22px;line-height:1.7}
+
+/* Secondary disclosure */
+.rule-details{font-size:13px;color:var(--ink-secondary)}
+.rule-details summary{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--accent-dark);font-weight:750;min-height:44px;padding:4px 0}
+.rule-details summary::marker{color:var(--accent)}
+.rule-details[open] summary{margin-bottom:12px}
+.rule-details .fm{margin-bottom:0}
+
+/* School links and modal */
+.sk{display:inline;border:0;border-bottom:1px dashed var(--accent);background:transparent;color:var(--accent-dark);text-decoration:none;cursor:pointer;font:inherit;font-weight:650;text-align:start;padding:2px 0}
+.sk:hover{color:var(--accent);border-bottom-style:solid}
+.modal-mask{position:fixed;inset:0;background:rgba(29,52,64,.46);display:none;align-items:center;justify-content:center;z-index:60;padding:18px;overscroll-behavior:contain}
+.modal-mask.show{display:flex;animation:fadeIn .2s ease}
+.modal{background:#fff;border-radius:16px;max-width:520px;width:100%;max-height:86vh;display:flex;flex-direction:column;box-shadow:var(--shadow);overflow:hidden}
+.modal-hd{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--border)}
+.modal-hd h2{font-size:18px;font-weight:760;letter-spacing:-.01em}
+.modal-hd .x{margin-inline-start:auto;cursor:pointer;border:1px solid var(--border);border-radius:999px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--ink-secondary);line-height:1;background:#fff}
+.modal-hd .x:hover{background:var(--accent-light)}
+.modal-bd{padding:8px 20px 20px;overflow-y:auto;overscroll-behavior:contain}
+.modal-bd .row{display:flex;gap:10px;padding:11px 0;border-bottom:1px dashed var(--border)}
+.modal-bd .row .k{width:58px;flex:none;color:var(--ink-muted);font-size:13px;padding-top:1px}
+.modal-bd .row .v{font-size:14px;font-weight:600;word-break:break-word;flex:1}
+.modal-bd .row .v a{color:var(--accent-dark);text-decoration:none;border-bottom:1px dashed var(--accent)}
+.qr{margin-top:14px;border:2px dashed var(--border-strong);border-radius:10px;min-height:132px;display:flex;align-items:center;justify-content:center;color:var(--ink-muted);font-size:13px;text-align:center;background:var(--surface-soft);padding:14px}
+.mnote{margin-top:10px;font-size:11px;color:var(--ink-muted);line-height:1.6}
+
+/* Contact details */
+.sc-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:2px 0 12px}
+.sc-sub2{font-size:12px;color:var(--ink-secondary);margin:0}
+.sc-badge{font-size:12px;color:var(--accent-dark);background:var(--accent-light);border-radius:999px;padding:4px 11px;white-space:nowrap;font-weight:700;flex:none}
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:10px}
+.sc-box{background:var(--surface-soft);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px}
+.sc-boxh{font-size:11px;color:var(--ink-muted);margin:0 0 5px}
+.sc-proj{font-size:13px;font-weight:600;color:var(--ink);margin:0 0 3px}
+.sc-proj:last-child{margin-bottom:0}
+.sc-phone{font-size:13px;font-weight:600;color:var(--ink);margin:0}
+.sc-phone a{color:var(--accent-dark);text-decoration:none;border-bottom:1px dashed var(--accent)}
+.sc-address{font-size:13px;font-weight:600;color:var(--ink);line-height:1.55;word-break:break-word}
+.sc-src{font-size:11px;color:var(--ink-muted);margin:4px 0 0;line-height:1.5}
+.sc-wx{background:var(--surface-soft);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:4px}
+.sc-wxname{font-size:13px;font-weight:600;color:var(--ink);margin:0}
+.sc-wxsrc{font-size:11px;color:var(--ink-muted);margin:3px 0 0;line-height:1.5}
+
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 20px;text-align:center;color:var(--ink-secondary);gap:12px}
+.empty-state .ei{width:48px;height:48px;border-radius:50%;background:var(--accent-light);color:var(--accent-dark);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700}
+.empty-state .et{font-size:15px;font-weight:700;color:var(--ink)}
+.empty-state .ed{font-size:13px;line-height:1.7;max-width:420px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:900px){body{padding:18px}.hdr{min-height:176px;padding-top:16px}.hdr h1{font-size:clamp(36px,10.5vw,58px);line-height:1.08;letter-spacing:-.03em}}
+@media(max-width:640px){body{padding:14px;overflow-x:hidden}.hdr{min-height:150px;padding:12px 0 18px}.hdr h1{font-size:clamp(34px,11.2vw,44px);line-height:1.06;letter-spacing:-.025em;max-width:10em}.hdr p{font-size:14px;margin-top:12px}.hdr-meta{margin-top:12px}.ir{grid-template-columns:1fr}.ig{min-width:0}.br{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.btn{padding-inline:12px}.rs .rd{grid-template-columns:1fr}.ps{grid-template-columns:repeat(2,minmax(0,1fr))}.cd{padding:16px}.cd-hd{align-items:flex-start}.cd-hd h2{min-width:0}.cd-hd .tag{min-width:0;flex-shrink:1;white-space:normal;text-align:end;max-width:48%;overflow-wrap:anywhere}.task-steps{font-size:11px;gap:5px}.step-hd h3{font-size:17px}.tw{margin-inline:-16px;border-inline:0;border-radius:0}th:nth-child(2),td:nth-child(2){min-width:220px}.table-scroll-hint{display:block}.tl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}.tl::before{display:none}.tl-it{padding:12px 8px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface-soft)}.tl-it .dot{margin-bottom:8px}}
+@media(max-width:400px){.task-steps{font-size:10px}.task-steps li:not(:last-child)::after{margin-inline-start:0}.task-steps li span{width:20px;height:20px}.br{grid-template-columns:1fr}.sc-top{align-items:flex-start;flex-direction:column}.sc-badge{white-space:normal}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style></head>
+<body>
+<a class="skip-link" href="#main">跳到主任务</a>
+<main id="main" class="wrap">
+
+<header class="hdr">
+<h1>2027 广州中考艺术特长生资讯</h1>
+<p>各校特长生录取分数线 · 合成分测算 · 招生联系方式一览</p>
+<div class="hdr-meta" aria-label="数据状态"><span>2026 录取结果已公布</span><span>数据更新时间：2026-07-20</span></div>
+</header>
+
+<section class="cd timeline-card" aria-labelledby="timelineTitle">
+<div class="cd-hd"><h2 id="timelineTitle">2027 招生时间线（按往年安排预估）</h2><span class="tag">提前安排</span></div>
+<p class="secondary-intro">以下时间按 2026 年流程推算，仅供提前安排；最终以 2027 年广州招考和学校公告为准。</p>
+<div class="tl-w"><div class="tl" role="list" aria-label="2027 年艺术特长生招生时间线（按往年安排预估）">
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">3月底</div><div class="dc">公布招生简章</div></div>
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">4月上旬</div><div class="dc">特长生报名</div></div>
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">4月中下旬</div><div class="dc">审核资格 +<br>公示测试名单</div></div>
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">5月上旬</div><div class="dc">专业测试</div></div>
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">5月中下旬</div><div class="dc">公示通过名单</div></div>
+<div class="tl-it" role="listitem"><div class="dot" aria-hidden="true"></div><div class="dt">6月1日–5日</div><div class="dc">填报志愿</div></div>
+</div></div>
+</section>
+
+<section class="cd task-card" aria-labelledby="taskTitle">
+<div class="cd-hd"><h2 id="taskTitle">开始测算</h2><span class="tag">选专业 → 输入分数 → 看学校</span></div>
+<ol class="task-steps" aria-label="测算步骤">
+<li><span>1</span>选择专业</li><li><span>2</span>输入成绩</li><li><span>3</span>查看学校</li>
+</ol>
+
+<section class="step" id="projectStep" aria-labelledby="projectTitle">
+<div class="step-hd"><div><p class="step-kicker">第 1 步</p><h3 id="projectTitle">选择艺术专业</h3><p class="step-desc">先选你参加测试的项目，学校列表和控制线会按此筛选。</p></div><span class="n" id="projCount"></span></div>
+<div class="ps" id="projSelector" role="group" aria-label="艺术专业类型" aria-describedby="project-error selectionHintText"></div>
+<div class="field-error" id="project-error" role="alert" aria-live="polite"></div>
+<div class="selection-hint" id="selectionHint" role="status" aria-live="polite" aria-atomic="true">
+<span class="selection-hint-mark" id="selectionHintMark" aria-hidden="true">↓</span>
+<span class="selection-hint-text" id="selectionHintText">选择一个专业后，下方会更新对应招生学校。</span>
+<a class="selection-hint-link" id="selectionHintLink" href="#schoolCard" aria-label="查看所选专业的招生学校" hidden>查看招生学校 <span aria-hidden="true">↓</span></a>
+</div>
+</section>
+
+<section class="step" id="scoreStep" aria-labelledby="scoreTitle">
+<div class="step-hd"><div><p class="step-kicker">第 2 步</p><h3 id="scoreTitle">输入你的成绩</h3><p class="step-desc" id="scoreScope">选定专业后，输入你的实际成绩。</p></div></div>
+<form class="score-form" id="scoreForm" onsubmit="event.preventDefault();calc()">
+<div class="ir">
+<div class="ig"><label for="exam">中考文化总分</label>
+<input type="number" id="exam" name="exam" min="0" max="810" step="1" inputmode="numeric" autocomplete="off" placeholder="0–810" aria-invalid="false" aria-describedby="exam-hint exam-err" oninput="markInputDirty()">
+<div class="h" id="exam-hint">满分 810 分（不含加分）</div><div class="err" id="exam-err" role="alert"></div></div>
+<div class="ig"><label for="talent">特长专业测试分</label>
+<input type="number" id="talent" name="talent" min="0" max="100" step="1" inputmode="numeric" autocomplete="off" placeholder="0–100" aria-invalid="false" aria-describedby="talent-hint talent-err" oninput="markInputDirty()">
+<div class="h" id="talent-hint">满分 100 分</div><div class="err" id="talent-err" role="alert"></div></div>
+</div>
+
+<div class="br">
+<button type="submit" class="btn btn-pri">计算合成分</button>
+<button type="button" class="btn btn-sec" onclick="resetAll()">重置</button>
+</div>
+<p class="calc-note">合成分满分 100 分，文化分与专业分各占 50%。</p>
+</form>
+
+<div id="resultBox" class="rs" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
+<div class="rt" id="rStatus"></div>
+<div class="rn" id="rScore">-</div>
+<div class="ru" id="rUnit">合成分（满分 100 分）</div>
+<div class="rd" id="rDetails"></div>
+<div id="rMatch"></div>
+</div>
+</section>
+</section>
+
+<section class="cd" id="schoolCard" aria-labelledby="schoolTitle">
+<div class="cd-hd"><h2 id="schoolTitle"><span id="selectedProjName">选择专业后</span>的招生学校</h2><span class="n" id="schoolCount"></span></div>
+<p class="table-note" id="tableNote" role="status" aria-live="polite">选择专业后，这里会显示对应学校、控制线和 2026 年录取成绩。</p>
+<div class="empty-state" id="emptyState">
+  <div class="ei" aria-hidden="true">1</div>
+  <div class="et">先选择一个艺术专业</div>
+  <div class="ed">选择后会列出该项目的招生学校、控制线、2026 年录取成绩和招生计划。完成成绩计算后，最后一列会显示你的合成分与录取成绩差值。</div>
+</div>
+<div class="table-shell" id="tableWrap" style="display:none">
+<p class="table-scroll-hint">移动端可横向滑动查看全部列</p>
+<div class="tw">
+<table aria-describedby="tableNote">
+<caption class="sr-only" id="tableCaption">所选艺术专业的招生学校对比表</caption>
+<thead><tr>
+<th scope="col">#</th><th scope="col">学校</th><th scope="col">区属</th>
+<th scope="col" class="cc">控制线 <small class="cc-hint">官方值，可按个人测算改</small> <button type="button" class="link-btn" onclick="resetCtrls()" title="把当前项目的控制线恢复为官方值">↺ 恢复官方值</button></th>
+<th scope="col" class="cs">2026 成绩</th>
+<th scope="col" class="ccp">合成分对比</th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="cd secondary-card rules-card" aria-labelledby="rulesTitle">
+<div class="cd-hd"><h2 id="rulesTitle">怎么算？录取规则与资格说明</h2><span class="tag">辅助阅读</span></div>
+<details class="rule-details">
+<summary>展开合成分公式、志愿规则和证书要求</summary>
+<div class="fm">
+合成分 = <code>(中考文化分 ÷ 810) × 100 × 50%</code> + <code>(特长考试分 ÷ 100) × 100 × 50%</code>
+<div class="meta">
+<span>满分 <span class="hl">100 分</span></span>
+<span>中考总分 <span class="hl">810 分</span></span>
+<span>特长总分 <span class="hl">100 分</span></span>
+</div>
+<div class="note">
+<b>录取批次：第一批次（最早批次）</b>，被录取后不再参与后续批次。<br>
+<b>志愿关键：</b>即使通过多校测试，<b>只能填 1 所学校 1 个项目</b>。文化分未达所选学校控制线，志愿失效，不会顺接到其他学校。<br>
+<b>录取方式：</b>2024 年起按合成分从高到低竞争录取，不再过线即录。<br>
+<b>证书：</b>须在毕业当年 5 月 1 日前三年内取得。
+</div>
+</div>
+</details>
+</section>
+
+<div class="ft">录取成绩与未录满状态：广州招考（2026-07-20）；招生计划与控制线：《2026 报考指南》；联系方式：学校及招考公开信息。联系方式中标记 🟡 的项目仍建议二次核验。点击学校名可查看项目、计划、控制线、地址、电话与公众号信息。</div>
+</main>
+
+<div class="modal-mask" id="modalMask" aria-hidden="true" onclick="if(event.target===this)closeContact()">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" aria-describedby="mBody" tabindex="-1">
+    <div class="modal-hd"><h2 id="mTitle">学校详情</h2><button type="button" class="x" id="modalClose" onclick="closeContact()" title="关闭学校详情" aria-label="关闭学校详情">×</button></div>
+    <div class="modal-bd" id="mBody"></div>
+  </div>
+</div>
+
+<script>
+var P_ORIG = {};
+var D = {"合唱":[{"name":"广州大学附属中学","district":"省市属","score":88.3333,"control":672},{"name":"广东广雅中学（荔湾校区）","district":"省市属","score":87.8802,"control":632},{"name":"广州市铁一中学（白云校区）","district":"省市属","score":85.4395,"control":672},{"name":"广州市第六中学（花都校区）","district":"省市属","score":85.2991,"control":632},{"name":"华南师范大学附属中学（石牌校区）","district":"省市属","score":85.1858,"control":672},{"name":"广州市第七中学（校本部）","district":"越秀","score":84.5877,"control":632},{"name":"广州市第五中学（校本部）","district":"海珠","score":84.1951,"control":672},{"name":"广州市执信中学（天河校区）","district":"省市属","score":83.0123,"control":632},{"name":"广州市花都区邝维煜纪念中学（校本部）","district":"花都","score":82.8457,"control":592},{"name":"广州外国语学校","district":"省市属","score":82.0136,"control":672},{"name":"广州市铁一中学（越秀校区）","district":"省市属","score":81.816,"control":672},{"name":"广州市真光中学（校本部）","district":"荔湾","score":81.5815,"control":672},{"name":"广州市第四中学","district":"荔湾","score":81.2319,"control":592},{"name":"广州市第十六中学（校本部）","district":"越秀","score":80.9979,"control":632},{"name":"广东实验中学（白云校区）","district":"省市属","score":80.1498,"control":632},{"name":"广州市第一一三中学（元岗校区）","district":"天河","score":78.3296,"control":632},{"name":"广州科学城中学","district":"黄埔","score":76.0105,"control":592},{"name":"广州市第一中学","district":"荔湾","score":75.7173,"control":492},{"name":"广州市增城区荔城中学","district":"增城","score":75.2751,"control":492},{"name":"广州市花都区圆玄中学","district":"花都","score":73.304,"control":492},{"name":"广州市第二中学南沙天元学校","district":"省市属","score":72.8704,"control":492},{"name":"广州市禺山高级中学","district":"番禺","score":72.3727,"control":492},{"name":"广东第二师范学院番禺附属中学","district":"番禺","score":69.5062,"control":492},{"name":"广州市白云艺术中学","district":"白云","score":68.6125,"control":492},{"name":"广州市从化区流溪中学","district":"从化","score":63.8844,"control":492}],"交响乐":[{"name":"广州市第二中学","district":"省市属","score":89.3867,"control":672},{"name":"广州市黄埔区苏元学校","district":"黄埔","score":87.8048,"control":592},{"name":"广州市第六中学（海珠校区）","district":"省市属","score":87.2716,"control":632},{"name":"广东仲元中学","district":"番禺","score":85.1169,"control":632},{"name":"广州实验中学","district":"黄埔","score":84.9895,"control":632},{"name":"广州市铁一中学（越秀校区）","district":"省市属","score":84.1691,"control":672},{"name":"广州中学","district":"天河","score":84.0025,"control":632},{"name":"广东实验中学（荔湾校区）","district":"省市属","score":83.6467,"control":632},{"name":"广州市育才中学","district":"越秀","score":83.4753,"control":592},{"name":"广州市执信中学（天河校区）","district":"省市属","score":83.1567,"control":632},{"name":"广州市第二中学南沙天元学校","district":"省市属","score":80.7338,"control":592},{"name":"广州外国语学校","district":"省市属","score":80.7272,"control":672},{"name":"清华附中湾区学校（智谷校区）","district":"省市属","score":80.6049,"control":672},{"name":"广州市天河外国语学校（珠江新城校区）","district":"天河","score":80.1957,"control":672},{"name":"广州市第十六中学（校本部）","district":"越秀","score":79.967,"control":632},{"name":"广东华侨中学","district":"省市属","score":79.2827,"control":592},{"name":"广州市第八十六中学","district":"黄埔","score":77.7012,"control":492},{"name":"广州市第四十一中学","district":"海珠","score":77.2549,"control":492},{"name":"广州市增城区高级中学","district":"增城","score":75.1342,"control":492},{"name":"广州市西关外国语学校","district":"荔湾","score":75.0247,"control":592},{"name":"广州市第三中学","district":"越秀","score":74.9457,"control":492},{"name":"广州市玉岩中学","district":"黄埔","score":73.0634,"control":592},{"name":"广州市花都区圆玄中学","district":"花都","score":72.7392,"control":492},{"name":"广州市实验外语学校","district":"白云","score":null,"control":632}],"民乐":[{"name":"广州市第六中学（海珠校区）","district":"省市属","score":86.9,"control":632},{"name":"广州市第七中学（校本部）","district":"越秀","score":86.1097,"control":632},{"name":"广东广雅中学（花都校区）","district":"省市属","score":85.0707,"control":632},{"name":"广州市铁一中学（白云校区）","district":"省市属","score":84.8391,"control":672},{"name":"广东仲元中学","district":"番禺","score":84.3319,"control":632},{"name":"广东实验中学（白云校区）","district":"省市属","score":83.8858,"control":632},{"name":"广州市培英中学（白云新城校区）","district":"白云","score":83.1097,"control":492},{"name":"广州市第四中学","district":"荔湾","score":82.7584,"control":592},{"name":"广州市天河中学","district":"天河","score":81.5017,"control":632},{"name":"广州市南武中学（校本部）","district":"海珠","score":80.2329,"control":632},{"name":"广州科学城中学","district":"黄埔","score":76.0786,"control":592},{"name":"华南师范大学附属南沙中学","district":"南沙","score":75.6049,"control":492},{"name":"广州市花都区邝维煜纪念中学（雅正校区）","district":"花都","score":73.4691,"control":492},{"name":"广州市番禺区象贤中学","district":"番禺","score":72.5247,"control":592},{"name":"广州市从化区流溪中学","district":"从化","score":68.0864,"control":492},{"name":"广州市黄埔区开元学校","district":"黄埔","score":64.1821,"control":492},{"name":"华南师范大学附属中学（知识城校区）","district":"省市属","score":null,"control":672},{"name":"广州市增城区派潭中学","district":"增城","score":null,"control":492}],"舞蹈":[{"name":"广州市第二中学","district":"省市属","score":88.5422,"control":672},{"name":"广州市执信中学（执信路校区）","district":"省市属","score":86.9601,"control":632},{"name":"华南师范大学附属中学（知识城校区）","district":"省市属","score":86.1944,"control":672},{"name":"广东广雅中学（荔湾校区）","district":"省市属","score":85.6611,"control":632},{"name":"广州市铁一中学（番禺校区）","district":"省市属","score":83.1957,"control":672},{"name":"广州市第四中学","district":"荔湾","score":82.9444,"control":592},{"name":"广州市铁一中学（越秀校区）","district":"省市属","score":82.884,"control":672},{"name":"广州市第三中学","district":"越秀","score":81.1049,"control":492},{"name":"广东实验中学（荔湾校区）","district":"省市属","score":79.8475,"control":632},{"name":"广东第二师范学院番禺附属中学","district":"番禺","score":79.6025,"control":492},{"name":"广州市玉岩中学","district":"黄埔","score":79.1914,"control":592},{"name":"广州市花都区秀全中学","district":"花都","score":79.0638,"control":592},{"name":"广州市培英中学（鹤洞校区）","district":"荔湾","score":79.0216,"control":492},{"name":"广州市培正中学","district":"越秀","score":78.8827,"control":492},{"name":"广州市第八十六中学","district":"黄埔","score":76.113,"control":492},{"name":"广州市第六中学（从化校区）","district":"省市属","score":76.0062,"control":592},{"name":"广州市黄埔区开元学校","district":"黄埔","score":75.9676,"control":492},{"name":"广州市第九十七中学（校本部）","district":"海珠","score":75.7963,"control":492},{"name":"广州市花都区职业技术学校（综合高中）","district":"花都","score":74.5054,"control":492},{"name":"广州市第十七中学","district":"越秀","score":74.344,"control":492},{"name":"广州市禺山高级中学","district":"番禺","score":74.237,"control":492},{"name":"广州市第七十五中学","district":"天河","score":73.6025,"control":492},{"name":"广州市第一中学","district":"荔湾","score":70.458,"control":492}],"美术":[{"name":"广州大学附属中学","district":"省市属","score":89.784,"control":672},{"name":"广州市增城区增城中学","district":"增城","score":86.5438,"control":632},{"name":"广州市真光中学（校本部）","district":"荔湾","score":85.1222,"control":672},{"name":"广州市天河中学","district":"天河","score":83.656,"control":632},{"name":"清华附中湾区学校（智谷校区）","district":"省市属","score":83.0184,"control":672},{"name":"广东番禺中学","district":"番禺","score":82.5265,"control":632},{"name":"广州市第五中学（校本部）","district":"海珠","score":81.9049,"control":672},{"name":"广州中学","district":"天河","score":81.6613,"control":632},{"name":"广州市第六中学（从化校区）","district":"省市属","score":80.9815,"control":632},{"name":"广州市南武中学（岭南画派纪念校区）","district":"海珠","score":79.3753,"control":592},{"name":"广州市育才中学","district":"越秀","score":79.037,"control":592},{"name":"广州市从化区从化中学","district":"从化","score":78.7926,"control":592},{"name":"广州市第八十六中学","district":"黄埔","score":78.7747,"control":492},{"name":"广州市增城区高级中学","district":"增城","score":78.4198,"control":492},{"name":"广州实验中学","district":"黄埔","score":76.6852,"control":632},{"name":"广东外语外贸大学实验中学","district":"白云","score":75.1793,"control":492},{"name":"广州市南海中学","district":"荔湾","score":74.9753,"control":492},{"name":"广东实验中学越秀学校","district":"省市属","score":74.9136,"control":492},{"name":"广州市增城区荔城中学","district":"增城","score":74.6728,"control":492},{"name":"广州科学城中学","district":"黄埔","score":74.1284,"control":592},{"name":"广州市从化区第五中学","district":"从化","score":74.0292,"control":492},{"name":"广州市禺山高级中学","district":"番禺","score":72.8471,"control":492},{"name":"广东第二师范学院番禺附属中学","district":"番禺","score":69.9846,"control":492},{"name":"广州市花都区第一中学","district":"花都","score":69.2823,"control":492},{"name":"广州市南沙鱼窝头中学","district":"南沙","score":68.6173,"control":492},{"name":"广州市花都区新华中学","district":"花都","score":67.9963,"control":492},{"name":"广州市白云艺术中学","district":"白云","score":67.9704,"control":492}],"语言艺术":[{"name":"广东广雅中学（花都校区）","district":"省市属","score":86.9275,"control":632},{"name":"广州市铁一中学（番禺校区）","district":"省市属","score":85.9864,"control":672},{"name":"广州市天河外国语学校（珠江新城校区）","district":"天河","score":83.5988,"control":672},{"name":"广州市第五中学（校本部）","district":"海珠","score":82.4667,"control":672},{"name":"广东外语外贸大学实验中学","district":"白云","score":80.8722,"control":492},{"name":"广州市花都区邝维煜纪念中学（校本部）","district":"花都","score":80.084,"control":592},{"name":"广州市海珠外国语实验中学（校本部）","district":"海珠","score":78.963,"control":592},{"name":"广州市南外实验学校","district":"南沙","score":68.8852,"control":412},{"name":"广州知识城中学","district":"黄埔","score":null,"control":492}],"非遗":[{"name":"广州市玉岩中学","district":"黄埔","score":80.6667,"control":672},{"name":"广州市第十七中学","district":"越秀","score":72.628,"control":492},{"name":"广州市花都区圆玄中学","district":"花都","score":70.2593,"control":492},{"name":"广州天省实验学校","district":"天河","score":null,"control":632}],"古琴":[{"name":"广州市第九十七中学（校本部）","district":"海珠","score":75.6111,"control":492}],"粤剧":[{"name":"华南师范大学附属南沙中学","district":"南沙","score":75.3099,"control":492},{"name":"广州市南海中学","district":"荔湾","score":69.5506,"control":492},{"name":"广州市花都区邝维煜纪念中学（雅正校区）","district":"花都","score":null,"control":492}],"剪纸":[{"name":"广州市南沙东涌中学","district":"南沙","score":75.8441,"control":492}],"体育舞蹈":[{"name":"广州市第八十九中学","district":"天河","score":78.8637,"control":492}],"艺术体操":[{"name":"广州市花都区新华中学","district":"花都","score":68.5272,"control":492},{"name":"广州市番禺区实验中学","district":"番禺","score":null,"control":492}]};
+var C = {"华南师范大学附属中学（石牌校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-38630511","addr":"广州市天河区中山大道西1号","wx":"华南师范大学附属中学","wxsrc":"招考办自主招生简章(微信号hsfzgd)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":10,"c":672,"s":85.1858}]},"华南师范大学附属中学（知识城校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-38630511","addr":"广州市黄埔区博华六路111号","wx":"华南师范大学附属中学","wxsrc":"招考办自主招生简章(微信号hsfzgd)","note":"✅","psrc":"报考指南 + 民乐汇总表(华附咨询电话)","projs":[{"p":"民乐","n":3,"c":672,"s":null},{"p":"舞蹈","n":10,"c":672,"s":86.1944}]},"广东实验中学（荔湾校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-81505108","addr":"广州市荔湾区省实路1号","wx":"广东实验中学","wxsrc":"招考办自主招生简章(微信号gdsyzxedu)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":632,"s":83.6467},{"p":"舞蹈","n":10,"c":632,"s":79.8475}]},"广东实验中学（白云校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-81508188/83810947","addr":"广州市白云区永平街道贤达二街6号","wx":"广东实验中学","wxsrc":"招考办自主招生简章(微信号gdsyzxedu)","note":"✅","psrc":"报考指南 + 民乐汇总表(荔湾/越秀总机)","projs":[{"p":"合唱","n":14,"c":632,"s":80.1498},{"p":"民乐","n":12,"c":632,"s":83.8858}]},"广东广雅中学（荔湾校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-81261280","addr":"广雅路1号","wx":"广东广雅中学","wxsrc":"招考办自主招生简章/官网(微信号gdgyzx1888)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":15,"c":632,"s":87.8802},{"p":"舞蹈","n":15,"c":632,"s":85.6611}]},"广东广雅中学（花都校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-81261280","addr":"广州市花都区雅正路1号","wx":"广东广雅中学","wxsrc":"招考办自主招生简章/官网(微信号gdgyzx1888)","note":"✅","psrc":"报考指南 + 民乐汇总表(广雅咨询电话)","projs":[{"p":"民乐","n":15,"c":632,"s":85.0707},{"p":"语言艺术","n":6,"c":632,"s":86.9275}]},"广州市执信中学（执信路校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-87770484","addr":"广州市越秀区执信南路152号","wx":"广州市执信中学","wxsrc":"招考办2026执信中学(天河校区)自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":632,"s":86.9601}]},"广州市执信中学（天河校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-83905010","addr":"天河区珠吉街道至信路1号","wx":"广州市执信中学","wxsrc":"招考办2026执信中学(天河校区)自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":632,"s":83.0123},{"p":"交响乐","n":18,"c":632,"s":83.1567}]},"广州市第二中学":{"district":"省市属","nature":"公办","range":"全市","phone":"020-32079838","addr":"广州市黄埔区开创大道北水西路","wx":"广州市第二中学","wxsrc":"招考办2026广州市第二中学自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":672,"s":89.3867},{"p":"舞蹈","n":10,"c":672,"s":88.5422}]},"广州市第六中学（海珠校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-89020333","addr":"广州市新港西路179号","wx":"广州市第六中学","wxsrc":"招考办自主招生简章(民乐汇总表官网确认)","note":"✅","psrc":"报考指南 + 民乐汇总表(官网确认✅)","projs":[{"p":"交响乐","n":18,"c":632,"s":87.2716},{"p":"民乐","n":10,"c":632,"s":86.9}]},"广州市第六中学（从化校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-31175014","addr":"广州市从化区灌村中路165号","wx":"广州市第六中学","wxsrc":"招考办自主招生简章(民乐汇总表官网确认)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":592,"s":76.0062},{"p":"美术","n":12,"c":632,"s":80.9815}]},"广州市第六中学（花都校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-86788207","addr":"广东省广州市花都区花山镇昌瑞北街2号","wx":"广州市第六中学","wxsrc":"招考办自主招生简章(民乐汇总表官网确认)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":8,"c":632,"s":85.2991}]},"广东华侨中学":{"district":"省市属","nature":"公办","range":"全市","phone":"020-81619559","addr":"广州市白云区金沙洲善贤路1号","wx":"广东华侨中学","wxsrc":"招考办自主招生简章(微信号gdhqzx1930)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":592,"s":79.2827}]},"广州大学附属中学":{"district":"省市属","nature":"公办","range":"全市","phone":"020-39118027","addr":"大学城校区","wx":"广州大学附属中学","wxsrc":"招考办2024广大附中自主招生简章(微信号gzdxfszx)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":672,"s":88.3333},{"p":"美术","n":12,"c":672,"s":89.784}]},"广州市铁一中学（越秀校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-61325999-2106","addr":"广州市越秀区东兴南路文化里13号","wx":"广州市铁一中学","wxsrc":"招考办自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":672,"s":81.816},{"p":"交响乐","n":15,"c":672,"s":84.1691},{"p":"舞蹈","n":8,"c":672,"s":82.884}]},"广州市铁一中学（番禺校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-39925999转2327","addr":"广州市番禺区石楼镇亚运城铁中路2号","wx":"广州市铁一中学","wxsrc":"招考办自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":672,"s":83.1957},{"p":"语言艺术","n":6,"c":672,"s":85.9864}]},"广州市铁一中学（白云校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-61330699","addr":"广州市白云区均禾街均禾大道新石路163号","wx":"广州市铁一中学","wxsrc":"招考办自主招生简章","note":"✅","psrc":"报考指南 + 民乐汇总表(铁一咨询电话)","projs":[{"p":"合唱","n":12,"c":672,"s":85.4395},{"p":"民乐","n":12,"c":672,"s":84.8391}]},"广州外国语学校":{"district":"省市属","nature":"公办","range":"全市","phone":"020-22908713","addr":"广州市南沙区凤凰大道102号","wx":"广州外国语学校","wxsrc":"招考办自主招生简章(微信号gzfls1963)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":672,"s":82.0136},{"p":"交响乐","n":15,"c":672,"s":80.7272}]},"清华附中湾区学校（智谷校区）":{"district":"省市属","nature":"公办","range":"全市","phone":"020-62969989","addr":"广州市天河区天坤二路99号","wx":"清华附中湾区学校","wxsrc":"招考办2024清华附中湾区学校自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":672,"s":80.6049},{"p":"美术","n":25,"c":672,"s":83.0184}]},"广州市第一中学":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-22395336","addr":"广州市荔湾区大坦沙岛育贤路30号（高中校区）","wx":"广州市第一中学","wxsrc":"荔湾区政府官网招聘单位一览表(微信公众号:广州市第一中学)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":492,"s":75.7173},{"p":"舞蹈","n":12,"c":492,"s":70.458}]},"广州市第四中学":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-81077204","addr":"广州市荔湾区西华路太保直街1号（后门）康王北路芦荻街（正门）","wx":"广州市第四中学","wxsrc":"荔湾区政府官网招聘一览表+学校推文(微信号广州市第四中学)","note":"✅","psrc":"报考指南 + 民乐汇总表(维基百科确认✅)","projs":[{"p":"合唱","n":12,"c":592,"s":81.2319},{"p":"民乐","n":10,"c":592,"s":82.7584},{"p":"舞蹈","n":10,"c":592,"s":82.9444}]},"广州市南海中学":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-81770376","addr":"荔湾区南岸富力路56号","wx":"广州市南海中学","wxsrc":"学校港澳班招生公告/新生活动(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":25,"c":492,"s":74.9753},{"p":"粤剧","n":6,"c":492,"s":69.5506}]},"广州市西关外国语学校":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-81702319","addr":"广州市荔湾区中山八路石路基1号","wx":"广州市西关外国语学校","wxsrc":"荔湾区政府官网招聘一览表(微信公众号:广州市西关外国语学校)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":592,"s":75.0247}]},"广州市真光中学（校本部）":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-81697676","addr":"广州市荔湾区白鹤洞培真路17号","wx":"广州市真光中学","wxsrc":"招考办2026广州市真光中学(校本部)自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":672,"s":81.5815},{"p":"美术","n":12,"c":672,"s":85.1222}]},"广州市第三中学":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-81872161","addr":"广州市越秀区大新路163号","wx":"广州市第三中学","wxsrc":"越秀区政府官网学校介绍页(微信公众号:广州市第三中学)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":22,"c":492,"s":74.9457},{"p":"舞蹈","n":18,"c":492,"s":81.1049}]},"广州市第七中学（校本部）":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-87774521","addr":"广州市越秀区烟墩路28号","wx":"广州市第七中学","wxsrc":"招聘公告附件/民乐汇总表维基百科确认(微信公众号:广州市第七中学)","note":"✅","psrc":"报考指南 + 民乐汇总表(维基百科确认✅)","projs":[{"p":"合唱","n":14,"c":632,"s":84.5877},{"p":"民乐","n":12,"c":632,"s":86.1097}]},"广州市第十六中学（校本部）":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-37633227","addr":"广州市中山二路37号","wx":"广州市第十六中学","wxsrc":"招考办2024广州市第十六中学(校本部)自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":632,"s":80.9979},{"p":"交响乐","n":18,"c":632,"s":79.967}]},"广州市第十七中学":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-83568629","addr":"广州市小北路280号","wx":"广州市第十七中学","wxsrc":"越秀区政府官网学校介绍页(微信公众号:广州市第十七中学)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":492,"s":74.344},{"p":"非遗","n":4,"c":492,"s":72.628}]},"广东实验中学越秀学校":{"district":"省市属","nature":"公办","range":"全市","phone":"020-83500645","addr":"环市东路天胜村16号之一","wx":"广东实验中学越秀学校","wxsrc":"学校招生简章/官网","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":25,"c":492,"s":74.9136}]},"广州市培正中学":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-87603699","addr":"广州越秀区培正路2号","wx":"广州市培正中学","wxsrc":"学校官网注册提示/港澳班公告(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":14,"c":492,"s":78.8827}]},"广州市育才中学":{"district":"越秀区","nature":"公办","range":"全市","phone":"020-37611207","addr":"广州市福今路2号","wx":"广州市育才中学","wxsrc":"学校2026特长生招生简章及测试结果公布(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":592,"s":83.4753},{"p":"美术","n":40,"c":592,"s":79.037}]},"广州市第五中学（校本部）":{"district":"海珠区","nature":"公办","range":"全市","phone":"020-84447197","addr":"海珠区南村路32号","wx":"广州市第五中学","wxsrc":"招考办2026广州市第五中学(金碧校区)自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":672,"s":84.1951},{"p":"美术","n":15,"c":672,"s":81.9049},{"p":"语言艺术","n":10,"c":672,"s":82.4667}]},"广州市南武中学（校本部）":{"district":"海珠区","nature":"公办","range":"全市","phone":"020-84447187","addr":"同福中路362号","wx":"广州市南武中学","wxsrc":"招考办2025南武中学自主招生简章/严正声明","note":"✅","psrc":"报考指南 + 民乐汇总表(南武咨询电话)","projs":[{"p":"民乐","n":12,"c":632,"s":80.2329}]},"广州市南武中学（岭南画派纪念校区）":{"district":"海珠区","nature":"公办","range":"老三区","phone":"020-84420012","addr":"广州市海珠区江南西路玫瑰二街12号","wx":"广州市南武中学","wxsrc":"招考办2025南武中学自主招生简章/严正声明","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":23,"c":592,"s":79.3753}]},"广州市第九十七中学（校本部）":{"district":"海珠区","nature":"公办","range":"全市","phone":"020-89635717","addr":"广州市海珠区晓港中马路133号","wx":"广州市第九十七中学","wxsrc":"海珠区政府官网招聘一览表/广州日报新花城(官方微信公众号'广州市第九十七中学')","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":12,"c":492,"s":75.7963},{"p":"古琴","n":8,"c":492,"s":75.6111}]},"广州市第四十一中学":{"district":"海珠区","nature":"公办","range":"全市","phone":"020-34016162","addr":"广州市海珠区工业大道北101号","wx":"广州市第四十一中学","wxsrc":"海珠区政府官网招聘一览表(微信公众号:广州市第四十一中学)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":10,"c":492,"s":77.2549}]},"广州市海珠外国语实验中学（校本部）":{"district":"海珠区","nature":"公办","range":"全市","phone":"020-84251105","addr":"海珠区前进路121号","wx":"广州市海珠外国语实验中学","wxsrc":"海珠区政府官网招聘一览表(微信公众号:广州市海珠外国语实验中学)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"语言艺术","n":10,"c":592,"s":78.963}]},"广州中学":{"district":"天河区","nature":"公办","range":"全市","phone":"020-89810774","addr":"广州市天河区华美路63号","wx":"广州中学","wxsrc":"招考办自主招生简章/官网","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":632,"s":84.0025},{"p":"美术","n":12,"c":632,"s":81.6613}]},"广州市第七十五中学":{"district":"天河区","nature":"公办","range":"全市","phone":"020-87242697","addr":"广州市天河区燕成路21号","wx":"广州市第七十五中学","wxsrc":"百度百科参考资料署名'广州市第七十五中学微信公众号'/新快报招生专版(学校官微)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":8,"c":492,"s":73.6025}]},"广州市第一一三中学（元岗校区）":{"district":"天河区","nature":"公办","range":"全市","phone":"020-85516394","addr":"广州市天河区元岗北街161号大院","wx":"广州市第一一三中学","wxsrc":"学校2025/2026高中招生简章(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":632,"s":78.3296}]},"广州市第八十九中学":{"district":"天河区","nature":"公办","range":"全市","phone":"020-37218089","addr":"广州市天河区天源路1219号","wx":"广州市第八十九中学","wxsrc":"腾讯【穗校】学校介绍(来源署名)/学校官网gz89sc.cn","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"体育舞蹈","n":6,"c":492,"s":78.8637}]},"广州市天河中学":{"district":"天河区","nature":"公办","range":"全市","phone":"020-38016591/38016577","addr":"广州市天河区珠江新城华成路7号","wx":"广州市天河中学","wxsrc":"新快报中考招生专版/2023招生计划(官微署名)","note":"✅","psrc":"报考指南 + 民乐汇总表(2023年公开信息(建议以官网/官微2026简章为准))","projs":[{"p":"民乐","n":4,"c":632,"s":81.5017},{"p":"美术","n":8,"c":632,"s":83.656}]},"广州市天河外国语学校（珠江新城校区）":{"district":"天河区","nature":"公办","range":"全市","phone":"020-85286791","addr":"广州市天河区珠江新城海乐路9号","wx":"广州市天河外国语学校","wxsrc":"招考办2026自主招生简章/学校严正声明(微信号gzthfls)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":672,"s":80.1957},{"p":"语言艺术","n":6,"c":672,"s":83.5988}]},"广州市培英中学（白云新城校区）":{"district":"白云区","nature":"公办","range":"全市","phone":"020-81699416","addr":"广州市白云区云城西路1151号广州市培英中学白云新城校区","wx":"广州市培英中学","wxsrc":"招考办2025培英中学(白云新城校区)自主招生简章/白云区政府","note":"✅","psrc":"报考指南 + 民乐汇总表(培英咨询电话)","projs":[{"p":"民乐","n":12,"c":492,"s":83.1097}]},"广州市培英中学（鹤洞校区）":{"district":"荔湾区","nature":"公办","range":"全市","phone":"020-81699416","addr":"广州市荔湾区培真路60号","wx":"广州市培英中学","wxsrc":"招考办2025培英中学(白云新城校区)自主招生简章/白云区政府","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":492,"s":79.0216}]},"广东外语外贸大学实验中学":{"district":"白云区","nature":"公办","range":"全市","phone":"020-87470502","addr":"广州市白云区太和镇和意路38号","wx":"广东外语外贸大学实验中学","wxsrc":"校方公开信息/百度百科引用(显示全称待官网二次确认)","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":12,"c":492,"s":75.1793},{"p":"语言艺术","n":6,"c":492,"s":80.8722}]},"广州市白云艺术中学":{"district":"白云区","nature":"公办","range":"白云","phone":"020-86325256","addr":"广州市白云区嘉禾街百花岭北街63号","wx":"广州市白云艺术中学","wxsrc":"白云区政府官网招聘一览表(xlsx)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":14,"c":492,"s":68.6125},{"p":"美术","n":18,"c":492,"s":67.9704}]},"广州市第八十六中学":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-82280894","addr":"广州市黄埔区大沙地西5号","wx":"广州市第八十六中学","wxsrc":"新快报2025招生专版(官方微信署名)/招考办简章(微信号gz86zhong)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":17,"c":492,"s":77.7012},{"p":"舞蹈","n":14,"c":492,"s":76.113},{"p":"美术","n":25,"c":492,"s":78.7747}]},"广州市玉岩中学":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-66882616","addr":"广州市黄埔区玉中路1号","wx":"广州市玉岩中学","wxsrc":"招考办2025玉岩中学自主招生简章","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":592,"s":73.0634},{"p":"舞蹈","n":10,"c":592,"s":79.1914},{"p":"非遗","n":8,"c":672,"s":80.6667}]},"广州科学城中学":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-32204964","addr":"广州市黄埔区萝平路79号","wx":"广州科学城中学","wxsrc":"招考办2021科学城中学自主招生简章/2026初一注册通知","note":"✅","psrc":"报考指南 + 民乐汇总表(广州招考办PDF(gz.gov.cn)参考)","projs":[{"p":"合唱","n":12,"c":592,"s":76.0105},{"p":"民乐","n":12,"c":592,"s":76.0786},{"p":"美术","n":25,"c":592,"s":74.1284}]},"广州知识城中学":{"district":"黄埔区","nature":"公办","range":"黄埔","phone":15918663636,"addr":"广州市黄埔区龙湖街凤凰下街29号","wx":"广州知识城中学","wxsrc":"学校2024高中招生咨询开放日通知原文(欢迎关注'广州知识城中学'微信公众号)","note":"✅","psrc":"《2026报考指南》学校联系方式(页90)","projs":[{"p":"语言艺术","n":6,"c":492,"s":null}]},"广州市黄埔区开元学校":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-32370835","addr":"广州市黄埔区禾丰路3号","wx":"广州开元学校","wxsrc":"学校2025小学一年级招生简章(官微署名'广州开元学校')","note":"✅；官微显示名与校牌全称略有差异","psrc":"报考指南 + 民乐汇总表(2023特长生简章咨询热线(参考))","projs":[{"p":"民乐","n":10,"c":492,"s":64.1821},{"p":"舞蹈","n":8,"c":492,"s":75.9676}]},"广州实验中学":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-32039856","addr":"广州市黄埔区创新大道修业路6号","wx":"广州实验中学订阅号","wxsrc":"招考办2026广州实验中学自主招生简章","note":"✅；官微显示名与校牌全称略有差异","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":8,"c":632,"s":84.9895},{"p":"美术","n":12,"c":632,"s":76.6852}]},"广州市黄埔区苏元学校":{"district":"黄埔区","nature":"公办","range":"全市","phone":"020-32099015","addr":"广州市黄埔区水西路17号","wx":"苏元山下","wxsrc":"广州二中官网《苏元学校2024高一注册报到须知》(公众号'苏元山下')","note":"✅；官微显示名与校牌全称略有差异","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":8,"c":592,"s":87.8048}]},"广东仲元中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-84883183","addr":"番禺区大龙街傍雁路288号","wx":"广东仲元中学","wxsrc":"招考办自主招生简章/民乐汇总表维基百科确认","note":"✅","psrc":"报考指南 + 民乐汇总表(维基百科确认✅)","projs":[{"p":"交响乐","n":15,"c":632,"s":85.1169},{"p":"民乐","n":8,"c":632,"s":84.3319}]},"广东番禺中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-84737289","addr":"广州市番禺区桥南街龙岐路501号","wx":"广东番禺中学","wxsrc":"招考办自主招生简章/官网(微信号gdpyzxedu)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":12,"c":632,"s":82.5265}]},"广州市番禺区实验中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-84884261","addr":"广州市番禺区市桥康乐路116号","wx":"广州市番禺区实验中学","wxsrc":"学校2026体育特长生招生简章(微信号pyqsyzx)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"艺术体操","n":4,"c":492,"s":null}]},"广州市番禺区象贤中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-84641650/020-84644565(番禺区教育局兜底)","addr":"番禺区沙湾镇亚中坊路15号","wx":"象贤中学","wxsrc":"招考办2024象贤中学自主招生简章(微信公众号:象贤中学)","note":"✅；官微显示名与校牌全称略有差异","psrc":"报考指南 + 民乐汇总表(学校招生办电话建议查学校官网/官微2026招生简章核实)","projs":[{"p":"民乐","n":10,"c":592,"s":72.5247}]},"广州市禺山高级中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-34737838","addr":"番禺区桥南街福贤路323号","wx":"广州市禺山高级中学","wxsrc":"《2024禺山高级中学体育艺术特长生自主招生简章》","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":492,"s":72.3727},{"p":"舞蹈","n":10,"c":492,"s":74.237},{"p":"美术","n":25,"c":492,"s":72.8471}]},"广东第二师范学院番禺附属中学":{"district":"番禺区","nature":"公办","range":"全市","phone":"020-34814933","addr":"广州市番禺区东环街螺山路2号广东二师附中","wx":"广东二师番禺附中","wxsrc":"wxnum.cn公众号名录(ID gdespyfz,第三方目录,建议二次核验)","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":14,"c":492,"s":69.5062},{"p":"舞蹈","n":12,"c":492,"s":79.6025},{"p":"美术","n":25,"c":492,"s":69.9846}]},"广州市花都区秀全中学":{"district":"花都区","nature":"公办","range":"全市","phone":"020-86830965","addr":"广州市花都区花城街溶华街1号","wx":"广州花都区秀全中学","wxsrc":"招考办2023/2021秀全中学自主招生简章/2026新生注册须知","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":592,"s":79.0638}]},"广州市花都区邝维煜纪念中学（校本部）":{"district":"花都区","nature":"公办","range":"全市","phone":"020-86890452","addr":"广州市花都区新华镇建设北路129号","wx":"邝维煜纪念中学","wxsrc":"《2026邝维煜纪念中学高中体艺特长生招生简章》","note":"✅；官微显示名与校牌全称略有差异","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":592,"s":82.8457},{"p":"语言艺术","n":6,"c":592,"s":80.084}]},"广州市花都区邝维煜纪念中学（雅正校区）":{"district":"花都区","nature":"公办","range":"全市","phone":"020-36898740/020-36898748(花都区教育局兜底)","addr":"广州市花都区平步大道中131号雅宝新城桃李居三街5号","wx":"邝维煜纪念中学","wxsrc":"《2026邝维煜纪念中学高中体艺特长生招生简章》","note":"✅；官微显示名与校牌全称略有差异","psrc":"报考指南 + 民乐汇总表(学校招生办电话建议查学校官网/官微2026招生简章核实)","projs":[{"p":"民乐","n":12,"c":492,"s":73.4691},{"p":"粤剧","n":3,"c":492,"s":null}]},"广州市花都区新华中学":{"district":"花都区","nature":"公办","range":"全市","phone":"020-36837266","addr":"广州市花都区新华街商业大道74号","wx":"广州市花都区新华中学","wxsrc":"花都融媒稿件来源署名'新华中学'/校方注册通知(全称待二次确认)","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":42,"c":492,"s":67.9963},{"p":"艺术体操","n":8,"c":492,"s":68.5272}]},"广州市花都区第一中学":{"district":"花都区","nature":"公办","range":"花都","phone":"020-86848285","addr":"广州市花都区花山镇坪山大街54号","wx":"广州市花都区第一中学","wxsrc":"企查查该校主体备案微信公众号(简介'广州市花都区第一中学公众号平台')","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":12,"c":492,"s":69.2823}]},"广州市花都区圆玄中学":{"district":"花都区","nature":"公办","range":"全市","phone":"020-36992854","addr":"广州市花都区花新华街梅花路9号圆玄中学","wx":"圆玄中学","wxsrc":"《2026圆玄中学高中体育艺术特长生自主招生简章》","note":"✅；官微显示名与校牌全称略有差异","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":15,"c":492,"s":73.304},{"p":"交响乐","n":17,"c":492,"s":72.7392},{"p":"非遗","n":8,"c":492,"s":70.2593}]},"广州市花都区职业技术学校（综合高中）":{"district":"花都区","nature":"公办","range":"花都","phone":"020-36818488","addr":"广州市花都区新华街云山大道65号","wx":"广州市花都区职业技术学校","wxsrc":"学校2026端午节慰问品采购公示(学校微信公众号平台)/南方+(花都职校官方公众号)","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"舞蹈","n":10,"c":492,"s":74.5054}]},"广州市南沙东涌中学":{"district":"南沙区","nature":"公办","range":"全市","phone":"020-84906128","addr":"广州市南沙区东涌镇和乐路1号","wx":"广州市南沙东涌中学教育集团","wxsrc":"学校2026招生声明/高一注册报到须知(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"剪纸","n":8,"c":492,"s":75.8441}]},"广州市南沙鱼窝头中学":{"district":"南沙区","nature":"公办","range":"南沙","phone":"020-34912662","addr":"广州市南沙区东涌镇市鱼路42号","wx":"南沙鱼窝头中学","wxsrc":"学校2026体艺特长生招生简章页脚+2025新生注册报到须知(招考网明示'微信公众号:南沙鱼窝头中学')","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":10,"c":492,"s":68.6173}]},"华南师范大学附属南沙中学":{"district":"南沙区","nature":"公办","range":"全市","phone":"020-34683335/020-39050023(南沙区教育局兜底)","addr":"广州市南沙区南沙街凤滨一路1号华南师范大学附属南沙中学","wx":"华南师范大学附属南沙中学","wxsrc":"新花城2025-09-11报道(官微署名)/南沙区教育局联合华师招聘公告","note":"✅","psrc":"报考指南 + 民乐汇总表(学校招生办电话建议查学校官网/官微2026招生简章核实)","projs":[{"p":"民乐","n":12,"c":492,"s":75.6049},{"p":"粤剧","n":6,"c":492,"s":75.3099}]},"广州市第二中学南沙天元学校":{"district":"省市属","nature":"公办","range":"全市","phone":"020-39031747","addr":"广州市南沙区南沙街英东大道25号","wx":"广州市第二中学南沙天元学校","wxsrc":"学校《2026特长生自主招生资格考生名单公示》","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":492,"s":72.8704},{"p":"交响乐","n":15,"c":592,"s":80.7338}]},"广州市增城区增城中学":{"district":"增城区","nature":"公办","range":"全市","phone":"020-82659383","addr":"广州市增城区荔湖街荔城大道420号增城中学","wx":"增城中学","wxsrc":"招考办2026增城中学自主招生简章(关注我校微信公众号平台:增城中学)","note":"✅；官微显示名与校牌全称略有差异","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":12,"c":632,"s":86.5438}]},"广州市增城区高级中学":{"district":"增城区","nature":"公办","range":"全市","phone":"020-82721816","addr":"增城区增江街梅花路10号13247519356","wx":"广州市增城区高级中学","wxsrc":"百度百科词条参考资料(来源'广州市增城区高级中学微信公众号')","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":15,"c":492,"s":75.1342},{"p":"美术","n":20,"c":492,"s":78.4198}]},"广州市增城区派潭中学":{"district":"增城区","nature":"公办","range":"增城","phone":"020-82822200","addr":"增城区派潭镇榕林路67号","wx":"广州市增城区派潭中学","wxsrc":"百度百科词条参考资料(来源'广州市增城区派潭中学微信公众号')","note":"✅","psrc":"报考指南 + 民乐汇总表(2023年公开信息(参考))","projs":[{"p":"民乐","n":10,"c":492,"s":null}]},"广州市增城区荔城中学":{"district":"增城区","nature":"公办","range":"全市","phone":"020-82731110","addr":"广州市增城区增江街东桥东路43号","wx":"广州市增城区荔城中学","wxsrc":"《广州市增城区荔城中学30周年校庆1号公告》(官微署名)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"合唱","n":12,"c":492,"s":75.2751},{"p":"美术","n":25,"c":492,"s":74.6728}]},"广州市从化区从化中学":{"district":"从化区","nature":"公办","range":"全市","phone":"020-87919068","addr":"从化区街口街城内路239号","wx":"广州市从化区从化中学","wxsrc":"招考办2023从化中学自主招生简章/2026注册须知(微信号gdchzx)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":12,"c":592,"s":78.7926}]},"广州市从化区第五中学":{"district":"从化区","nature":"公办","range":"全市","phone":"020-87912458","addr":"城郊街埔顶","wx":"广州市从化区第五中学","wxsrc":"从化区教育局/华城报道(来源'广州市从化区第五中学'公众号)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"美术","n":15,"c":492,"s":74.0292}]},"广州市从化区流溪中学":{"district":"从化区","nature":"公办","range":"全市","phone":"020-37937466","addr":"从化区江埔街沿江南路300号","wx":"流溪中学","wxsrc":"wxnum.cn公众号档案(名称'流溪中学',运营主体广州市从化区流溪中学)/学校推文","note":"✅；官微显示名与校牌全称略有差异","psrc":"报考指南 + 民乐汇总表(2024特长生简章官微教务处(参考))","projs":[{"p":"合唱","n":12,"c":492,"s":63.8844},{"p":"民乐","n":10,"c":492,"s":68.0864}]},"广州市南外实验学校":{"district":"南沙区","nature":"民办","range":"全市","phone":15323364677,"addr":"广州市南沙区万顷沙镇工业大道429号","wx":"广州市南外实验学校","wxsrc":"校方所有公开渠道均泛称'学校公众号'未明示显示名；品牌简称'广州南外'；按校牌全称推断，待校方确认","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式(页87/93)","projs":[{"p":"语言艺术","n":6,"c":412,"s":68.8852}]},"广州天省实验学校":{"district":"天河区","nature":"民办","range":"全市","phone":"020-37091261","addr":"广州市天河区天源路399号","wx":"广州天省实验学校","wxsrc":"招考办2025天省实验学校自主招生简章(微信号txsyweixin)","note":"✅","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"非遗","n":4,"c":632,"s":null}]},"广州市实验外语学校":{"district":"白云区","nature":"民办","range":"全市","phone":"020-36209730","addr":"广州市白云区广花一路599号（机场高速、华南快速，平沙出口）","wx":"广州市实验外语学校","wxsrc":"学校官网gwdwx.com/招聘公告(微信号gwdwx88)；显示名待二次确认(校方简称'广实外校')","note":"🟡；显示全称/账号待官网二次确认","psrc":"《2026报考指南》学校联系方式","projs":[{"p":"交响乐","n":10,"c":632,"s":null}]}};
+
+var PX = ["合唱","交响乐","民乐","舞蹈","美术","语言艺术","非遗","古琴","粤剧","剪纸","体育舞蹈","艺术体操"];
+var selProj = null;
+var curExam = null, curTalent = null;
+var hasCalculated = false;
+var modalTrigger = null;
+
+var icons = {"合唱":"CH","交响乐":"SY","民乐":"MY","舞蹈":"DN","美术":"AR","语言艺术":"SP","非遗":"IH","古琴":"GQ","粤剧":"OP","剪纸":"PC","体育舞蹈":"BD","艺术体操":"RG"};
+
+function esc(s){return (s==null)?"":String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function escAttr(s){return esc(s).replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
+function hasValidScoreInputs(){
+  var e = document.getElementById("exam").value.trim();
+  var t = document.getElementById("talent").value.trim();
+  return e !== "" && t !== "" && Number.isInteger(Number(e)) && Number.isInteger(Number(t)) && Number(e)>=0 && Number(e)<=810 && Number(t)>=0 && Number(t)<=100;
+}
+function restoreControls(p){
+  if (!D[p] || !P_ORIG[p]) return;
+  D[p].forEach(function(s,i){ if(P_ORIG[p][i] !== undefined) s.control = P_ORIG[p][i]; });
+}
+function setProjectError(msg){
+  var el = document.getElementById("project-error");
+  if (el) el.textContent = msg || "";
+}
+function updateTaskState(){
+  var scope = document.getElementById("scoreScope");
+  if (!scope) return;
+  scope.textContent = selProj
+    ? "已选择「" + selProj + "」，输入你的实际成绩后查看该项目的学校匹配。"
+    : "选定专业后，输入你的实际成绩。";
+}
+function updateSelectionHint(){
+  var hint = document.getElementById("selectionHint");
+  var mark = document.getElementById("selectionHintMark");
+  var text = document.getElementById("selectionHintText");
+  var link = document.getElementById("selectionHintLink");
+  if (!hint || !mark || !text || !link) return;
+  if (!selProj || !D[selProj]) {
+    hint.classList.remove("ready");
+    mark.textContent = "↓";
+    text.textContent = "选择一个专业后，下方会更新对应招生学校。";
+    link.hidden = true;
+    return;
+  }
+  hint.classList.add("ready");
+  mark.textContent = "✓";
+  text.textContent = "已选择「" + selProj + "」，下方已更新 " + D[selProj].length + " 所招生学校。";
+  link.hidden = false;
+}
+
+function renderProjSelector() {
+  var el = document.getElementById("projSelector");
+  document.getElementById("projCount").textContent = PX.length + " 类";
+  el.innerHTML = PX.map(function(p) {
+    var cnt = D[p] ? D[p].length : 0;
+    var ico = icons[p] || "OD";
+    var selected = selProj === p;
+    return '<button type="button" class="p' + (selected ? ' sel' : '') + '" aria-pressed="' + (selected ? 'true' : 'false') + '" aria-label="' + escAttr(p) + '，' + cnt + ' 所学校" onclick="selectProj(\'' + p + '\')"><span class="pi" aria-hidden="true">' + ico + '</span><span class="pn">' + esc(p) + '</span><span class="pc">' + cnt + ' 所学校</span></button>';
+  }).join("");
+}
+
+function selectProj(p) {
+  if (!D[p]) return;
+  if (!P_ORIG[p]) P_ORIG[p] = D[p].map(function(s) { return s.control; });
+  selProj = p;
+  setProjectError("");
+  renderProjSelector();
+  updateTaskState();
+  updateSelectionHint();
+  if (hasCalculated && hasValidScoreInputs()) calc(true);
+  else renderTable();
+}
+
+function setErr(id, msg) {
+  var el = document.getElementById(id + '-err');
+  var input = document.getElementById(id);
+  if (!el || !input) return;
+  input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  if (msg) { el.textContent = msg; input.classList.add('bad'); }
+  else { el.textContent = ''; input.classList.remove('bad'); }
+}
+
+function markInputDirty(){
+  curExam = null;
+  curTalent = null;
+  hasCalculated = false;
+  document.getElementById("resultBox").className = "rs";
+  document.getElementById("rMatch").innerHTML = "";
+  if (selProj) renderTable();
+}
+
+function renderTable() {
+  var note = document.getElementById("tableNote");
+  if (!selProj || !D[selProj]) {
+    document.getElementById("emptyState").style.display = "flex";
+    document.getElementById("tableWrap").style.display = "none";
+    document.getElementById("tbody").innerHTML = "";
+    document.getElementById("selectedProjName").textContent = "选择专业后";
+    document.getElementById("schoolCount").textContent = "";
+    if (note) note.textContent = "选择专业后，这里会显示对应学校、控制线和 2026 年录取成绩。";
+    return;
+  }
+  document.getElementById("emptyState").style.display = "none";
+  document.getElementById("tableWrap").style.display = "block";
+  document.getElementById("selectedProjName").textContent = selProj;
+
+  var schools = D[selProj];
+  document.getElementById("schoolCount").textContent = schools.length + " 所";
+  document.getElementById("tableCaption").textContent = selProj + "专业的招生学校对比表";
+  if (note) note.textContent = hasCalculated
+    ? "「" + selProj + "」共 " + schools.length + " 所学校，已按你的合成分显示控制线和录取成绩对比。"
+    : "「" + selProj + "」共 " + schools.length + " 所学校；完成成绩计算后，最后一列才显示你的合成分对比。";
+
+  var comp = hasCalculated ? (curExam / 810) * 100 * 0.5 + (curTalent / 100) * 100 * 0.5 : null;
+  var html = "", idx = 0, lastDist = "";
+
+  schools.forEach(function(s) {
+    if (s.district !== lastDist) {
+      html += '<tr class="sct"><td colspan="6" style="background:var(--surface-soft)!important;border-bottom:1px solid var(--border-strong);font-weight:750;font-size:12px;color:var(--ink);padding:9px">' + esc(s.district) + '</td></tr>';
+      lastDist = s.district;
+    }
+    idx++;
+    var mm = hasCalculated && curExam >= s.control;
+    var sco = s.score !== null ? s.score.toFixed(2) : "未录满";
+    var cmp = "";
+    if (!hasCalculated) {
+      cmp = '<span class="table-pending">完成计算后查看</span>';
+    } else if (!mm) {
+      cmp = '<span class="cmp-blocked">文化未达标</span>';
+    } else if (s.score === null) {
+      cmp = '<span class="table-pending">暂无官方成绩</span>';
+    } else {
+      var df = comp - s.score;
+      cmp = df >= 0
+        ? '<span class="cmp-good">+' + df.toFixed(2) + '</span>'
+        : '<span class="cmp-risk">' + df.toFixed(2) + '</span>';
+    }
+    var bg = s.district === "省市属" ? "bs" : "bq";
+    var bl = s.district === "省市属" ? "省市" : "区属";
+    html += '<tr><td style="text-align:center;color:var(--ink-muted)">' + idx + '</td>' +
+      '<td><span class="bg ' + bg + '">' + bl + '</span> ' + '<button type="button" class="sk" data-n="' + escAttr(s.name) + '" onclick="showContact(this.dataset.n, selProj)" aria-label="查看 ' + escAttr(s.name) + ' 的招生联系方式">' + esc(s.name) + '</button></td>' +
+      '<td style="color:var(--ink-secondary);font-size:11px">' + esc(s.district) + '</td>' +
+      '<td class="cc"><input type="number" value="' + s.control + '" min="400" max="750" step="1" inputmode="numeric" aria-label="' + escAttr(s.name) + ' 的官方文化分控制线" title="官方控制线，可按个人测算改" onchange="updateCtrl(this,' + idx + ')"></td>' +
+      '<td style="text-align:center;font-size:11px;font-weight:750;color:var(--ink)">' + sco + '</td>' +
+      '<td style="text-align:center;font-size:11px">' + cmp + '</td></tr>';
+  });
+  document.getElementById("tbody").innerHTML = html;
+}
+
+function updateCtrl(input, idx) {
+  if (!selProj || !D[selProj]) return;
+  var schools = D[selProj], row = schools[idx - 1];
+  if (!row) return;
+  var v = Number(input.value.trim());
+  if (!Number.isInteger(v) || v < 400 || v > 750) {
+    input.value = row.control;
+    input.setCustomValidity("请输入 400–750 之间的整数");
+    input.reportValidity();
+    return;
+  }
+  input.setCustomValidity("");
+  row.control = v;
+  if (hasCalculated) calc(true);
+  else renderTable();
+}
+
+function calc(silent) {
+  if (!selProj || !D[selProj]) {
+    setProjectError("请先选择艺术专业，再计算该项目的匹配结果。");
+    var firstProject = document.querySelector("#projSelector .p");
+    if (!silent && firstProject) firstProject.focus();
+    return false;
+  }
+  var examRaw = document.getElementById("exam").value.trim();
+  var talentRaw = document.getElementById("talent").value.trim();
+  var e = Number(examRaw), t = Number(talentRaw);
+  var exOk = examRaw !== "" && Number.isInteger(e) && e >= 0 && e <= 810;
+  var tOk = talentRaw !== "" && Number.isInteger(t) && t >= 0 && t <= 100;
+  setErr('exam', exOk ? '' : '请输入 0–810 之间的整数');
+  setErr('talent', tOk ? '' : '请输入 0–100 之间的整数');
+  if (!exOk || !tOk) {
+    if (!silent) document.getElementById(exOk ? "talent" : "exam").focus();
+    return false;
+  }
+  setProjectError("");
+  curExam = e;
+  curTalent = t;
+  hasCalculated = true;
+  var comp = (e/810)*100*0.5 + (t/100)*100*0.5;
+  var ep = (e/810)*100*0.5, tp = (t/100)*100*0.5;
+  var schools = D[selProj];
+  var reachable = 0, totalCompare = 0, above = 0;
+  schools.forEach(function(s) {
+    if (e >= s.control) reachable++;
+    if (s.score !== null && e >= s.control) { totalCompare++; if (comp >= s.score) above++; }
+  });
+
+  var rb = document.getElementById("resultBox");
+  rb.className = "rs show " + (reachable > 0 ? "pass" : "fail");
+  if (reachable === 0) {
+    document.getElementById("rStatus").innerHTML = '<b>' + esc(selProj) + '</b>：文化分未达到任何招生学校的控制线';
+    document.getElementById("rUnit").textContent = "请先参考控制线，再判断志愿选择";
+  } else {
+    document.getElementById("rStatus").innerHTML = '<b>' + esc(selProj) + '</b>：文化分达到 <b>' + reachable + '</b> 所学校的控制线';
+    document.getElementById("rUnit").textContent = "合成分（满分 100 分）";
+  }
+  document.getElementById("rScore").textContent = comp.toFixed(2);
+  document.getElementById("rDetails").innerHTML =
+    '<div class="i"><div class="l">文化折算分(×50%)</div><div class="v">(' + e + '÷810)×100×50%=' + ep.toFixed(2) + '</div></div>' +
+    '<div class="i"><div class="l">特长折算分(×50%)</div><div class="v">(' + t + '÷100)×100×50%=' + tp.toFixed(2) + '</div></div>' +
+    '<div class="i"><div class="l">文化分达标学校</div><div class="v">' + reachable + ' 所</div></div>' +
+    '<div class="i"><div class="l">超过 2026 年录取成绩</div><div class="v">' + (totalCompare > 0 ? above + '/' + totalCompare + ' 所' : '暂无可比数据') + '</div></div>';
+
+  var match = document.getElementById("rMatch");
+  match.innerHTML = "";
+  if (totalCompare > 0) {
+    var pct = Math.round(above / totalCompare * 100);
+    var cl = "y", lb = "超过 " + above + "/" + totalCompare + " 所学校的 2026 年录取成绩（" + pct + "%）";
+    if (pct >= 70) { cl = "g"; lb = "优势：" + lb; }
+    else if (pct <= 30) { cl = "r"; lb = "风险：" + lb; }
+    else { lb = "参考：" + lb; }
+    match.innerHTML = '<div class="rm ' + cl + '">' + lb + '</div>';
+  } else {
+    match.innerHTML = '<div class="rm y">当前项目暂无可比较的官方录取成绩</div>';
+  }
+  renderTable();
+  return true;
+}
+
+function resetCtrls() {
+  if (!selProj || !D[selProj]) return;
+  if (!confirm('把当前项目的控制线还原为 2026 官方值？')) return;
+  restoreControls(selProj);
+  if (hasCalculated) calc(true);
+  else renderTable();
+}
+
+function resetAll() {
+  Object.keys(P_ORIG).forEach(function(p){ restoreControls(p); });
+  document.getElementById("exam").value = "";
+  document.getElementById("talent").value = "";
+  setErr('exam', '');
+  setErr('talent', '');
+  setProjectError("");
+  curExam = null;
+  curTalent = null;
+  hasCalculated = false;
+  selProj = null;
+  document.getElementById("resultBox").className = "rs";
+  document.getElementById("rStatus").textContent = "";
+  document.getElementById("rDetails").innerHTML = "";
+  document.getElementById("rMatch").innerHTML = "";
+  updateTaskState();
+  updateSelectionHint();
+  renderProjSelector();
+  renderTable();
+}
+
+function showContact(name, proj){
+  var c = C[name];
+  if(!c){return;}
+  modalTrigger = document.activeElement;
+  document.getElementById("mTitle").textContent = name;
+  var sub = [];
+  if(c.district) sub.push(c.district);
+  if(c.range) sub.push(c.range + "招生");
+  if(c.nature) sub.push(c.nature);
+  var cur = null;
+  for(var i=0;i<c.projs.length;i++){ if(c.projs[i].p===proj) cur=c.projs[i]; }
+  var badge = "";
+  if(cur){
+    var sc = (cur.s==null) ? "未录满" : (cur.s.toFixed(2) + " 分");
+    badge = '<div class="sc-badge">' + esc(proj) + ' ' + sc + '</div>';
+  } else if(c.projs.length){
+    var s0 = (c.projs[0].s==null) ? "未录满" : (c.projs[0].s.toFixed(2) + " 分");
+    badge = '<div class="sc-badge">' + esc(c.projs[0].p) + ' ' + s0 + '</div>';
+  }
+  var ph = "";
+  for(var j=0;j<c.projs.length;j++){
+    var p=c.projs[j];
+    var nn = (p.n==null)?"—":p.n;
+    var cc = (p.c==null)?"—":p.c;
+    ph += '<p class="sc-proj">' + esc(p.p) + ' ' + nn + ' 人 · 控制线 ' + cc + '</p>';
+  }
+  var psrc = c.psrc ? c.psrc : (c.note||"");
+  var wxName = c.wx || name;
+  var wsrc = c.wxsrc ? '<div class="mnote">公众号来源：' + esc(c.wxsrc) + '</div>' : '';
+  var wnote = c.note ? '<div class="mnote">核实状态：' + esc(c.note) + '</div>' : '';
+  var phone = c.phone == null ? "" : String(c.phone);
+  var phoneHref = phone.replace(/[^0-9+\-]/g, "");
+  var h = ''
+    + '<div class="sc-top"><p class="sc-sub2">' + esc(sub.join(" · ")) + '</p>' + badge + '</div>'
+    + '<div class="sc-grid">'
+    +   '<div class="sc-box"><p class="sc-boxh">艺术特长项目</p>' + ph + '</div>'
+    +   '<div class="sc-box"><p class="sc-boxh">招生办电话</p>'
+    +     '<p class="sc-phone"><a href="tel:' + phoneHref + '">' + esc(phone || "—") + '</a></p>'
+    +     '<p class="sc-src">来源：' + esc(psrc) + '</p></div>'
+    +   '<div class="sc-box"><p class="sc-boxh">学校地址</p><p class="sc-address">' + esc(c.addr || "—") + '</p></div>'
+    + '</div>'
+    + '<div class="sc-wx" aria-label="微信公众号搜索指引">'
+    +   '<p class="sc-wxname">微信公众号：' + esc(wxName) + '</p>'
+    +   '<p class="sc-wxsrc">请在微信中搜索“' + esc(wxName) + '”，并核对学校名称和认证信息。页面不提供二维码；如有疑问，请以学校官网或招生简章为准。</p>'
+    + '</div>'
+    + wnote + wsrc;
+  document.getElementById("mBody").innerHTML = h;
+  var mask = document.getElementById("modalMask");
+  mask.classList.add("show");
+  mask.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  var main = document.getElementById("main");
+  if (main) main.inert = true;
+  window.setTimeout(function(){ document.getElementById("modalClose").focus(); }, 0);
+}
+
+function getModalFocusable(){
+  var modal = document.querySelector("#modalMask .modal");
+  if (!modal) return [];
+  return Array.prototype.slice.call(modal.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')).filter(function(el){ return !el.hidden && el.offsetParent !== null; });
+}
+function closeContact(){
+  var mask = document.getElementById("modalMask");
+  mask.classList.remove("show");
+  mask.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  var main = document.getElementById("main");
+  if (main) main.inert = false;
+  if (modalTrigger && document.contains(modalTrigger)) modalTrigger.focus();
+  modalTrigger = null;
+}
+function handleModalKeydown(e){
+  var mask = document.getElementById("modalMask");
+  if (!mask.classList.contains("show")) return;
+  if (e.key === "Escape") { e.preventDefault(); closeContact(); return; }
+  if (e.key !== "Tab") return;
+  var nodes = getModalFocusable();
+  if (!nodes.length) return;
+  var first = nodes[0], last = nodes[nodes.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+}
+document.addEventListener("keydown", handleModalKeydown);
+
+renderProjSelector();
+updateTaskState();
+updateSelectionHint();
+renderTable();
+</script>
+</body></html>
